@@ -15,23 +15,31 @@
 <body>
 
     <h1>Privacy Policy for LexoNews</h1>
-    <p><strong>Effective Date:</strong> May 24, 2026</p>
+    <p><strong>Effective Date:</strong> July 1, 2026</p>
 
     <p>LexoNews is built as a free, open-source custom feed reader application. This service is provided at no cost and is intended for use completely as-is.</p>
 
     <h2>1. Absolute On-Device Data Isolation</h2>
-    <p>Your privacy is an absolute architectural design choice of LexoNews. The application operates entirely locally on your physical device. All custom search operators, complex filter criteria, content processing rules, text-scoring configurations, and downloaded content caches are stored inside an isolated SQLite database on your device via the Room persistence layer. None of this data is ever transmitted, collected, uploaded, or exposed to any external servers, third parties, or systems.</p>
+    <p>Your personal data is an absolute architectural design choice of LexoNews. The application operates entirely locally on your physical device. All custom search operators, complex filter criteria, content processing rules, text-scoring configurations, and downloaded content caches are stored inside an isolated SQLite database on your device via the Room persistence layer. None of this content data is ever transmitted, collected, uploaded, or exposed to any external servers, third parties, or systems.</p>
 
-    <h2>2. Network and External Connectivity</h2>
-    <p>LexoNews establishes direct HTTPS network connections directly to the public RSS or XML feed targets specified by you. No intermediary proxy server is utilized. The application does not deploy any tracking cookies, analytical event loops, behavioral frameworks, or external logging monitors.</p>
+    <h2>2. Anonymous Usage Analytics (Telemetry)</h2>
+    <p>To optimize performance, diagnose issues on modern target platforms, and guide software updates, LexoNews collects lightweight, anonymous technical event signals. This pipeline is built with strict privacy constraints:</p>
+    <ul>
+        <li><strong>No Personally Identifiable Information (PII):</strong> The application never collects, views, or transmits names, email addresses, IP addresses, location data, or physical device serial numbers.</li>
+        <li><strong>On-Device Cryptographic Masking:</strong> Upon the first installation, a random identifier is generated locally. This identifier is immediately processed using a secure, one-way <code>SHA-256</code> cryptographic hash directly on the device. The raw identifier is never stored or transmitted over the air.</li>
+        <li><strong>Direct Transmission Channel:</strong> Telemetry signals are pushed securely over HTTPS directly to our ingestion endpoint at <code>nom.telemetrydeck.com</code>, bypassing generic background tracking engines or third-party behavioral tracking loops.</li>
+    </ul>
 
-    <h2>3. Data Deletion and Control</h2>
-    <p>Because your configuration profile lives exclusively on your device, you possess total sovereignty over it. Clearing the application's cache or data via the Android System Settings panel—or completely uninstalling the application—instantly and permanently purges every trace of data from the device's storage media.</p>
+    <h2>3. Network and External Connectivity</h2>
+    <p>LexoNews establishes direct HTTPS network connections directly to the public RSS or XML feed targets specified by you. No intermediary proxy server is utilized. Outside of the anonymous performance telemetry described in Section 2, the application does not deploy tracking cookies, advertisement networks, or behavioral frameworks.</p>
 
-    <h2>4. Changes to This Policy</h2>
-    <p>This privacy documentation may be modified periodically. You are advised to review this page occasionally for any structural changes.</p>
+    <h2>4. Data Deletion and Control</h2>
+    <p>Because your configuration profile and local installation hash live exclusively on your device, you possess total sovereignty over it. Clearing the application's cache or data via the Android System Settings panel—or completely uninstalling the application—instantly and permanently purges every trace of data and the anonymous identifier from the device's storage media.</p>
 
-    <h2>5. Contact Information</h2>
+    <h2>5. Changes to This Policy</h2>
+    <p>This privacy documentation may be modified periodically to accurately reflect technical changes in the application architecture. You are advised to review this page occasionally for any updates.</p>
+
+    <h2>6. Contact Information</h2>
     <p>If you have any technical questions or need support regarding LexoNews, please reach out via email: <strong>lexo.stp@gmail.com</strong></p>
 
     <div class="footer">
